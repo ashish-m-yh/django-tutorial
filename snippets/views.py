@@ -33,7 +33,7 @@ def snippet_detail(request, snippet_id):
     print ('foobar')
 
     try:
-        snippet = Snippet.objects.get(pk=pk)
+        snippet = Snippet.objects.get(pk=snippet_id)
     except Snippet.DoesNotExist:
         return HttpResponse(status=404)
 
